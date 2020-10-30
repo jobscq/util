@@ -1,11 +1,14 @@
 import isArray from '../is/array'
 
-test('test isArray return true', () => {
-  const arr = []
-  expect(isArray(arr)).toBeTruthy()
-})
+describe('isArray', () => {
+  it('test isArray: return true', () => {
+    expect(isArray([])).toBe(true)
+    expect(isArray(new Array)).toBe(true)
+  })
 
-test('test isArray return true', () => {
-  const name = undefined
-  expect(isArray(name)).toBeFalsy()
+  it('test isArray: return false', () => {
+    expect(isArray(undefined)).toBe(false)
+    expect(isArray(null)).toBe(false)
+    expect(isArray({length:0})).toBe(false)
+  })
 })
