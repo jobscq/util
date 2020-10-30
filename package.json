@@ -13,6 +13,10 @@
     "eslint-fix": "eslint --fix --ext .html,.js ./packages",
     "test": "jest"
   },
+  "workspaces": [
+    "packages/*",
+    "packages/util/*"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
